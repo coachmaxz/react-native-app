@@ -1,36 +1,26 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  View,
-  Text,
-  Dimensions,
-} from 'react-native';
 
-const { width, height } = Dimensions.get('window');
+import { Text, View, StyleSheet } from 'react-native';
 
 function App(): JSX.Element {
   return (
-    <SafeAreaView>
-      <StatusBar barStyle="dark-content" backgroundColor="#EEEEEE" />
-      <View style={styles.container}>
-        <Text> Hello World </Text>
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <Text style={styles.text}>
+        Hello World
+      </Text>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    width: width,
-    height: height,
-    flexWrap: 'wrap',
-    flexDirection: 'column',
-    alignContent: 'center',
     alignItems: 'center',
     justifyContent:'center',
-    backgroundColor: '#EEEEEE',
+  },
+  text: {
+    paddingTop: 100,
+    fontSize: 20,
+    color: 'steelblue',
   }
 });
 
