@@ -13,7 +13,7 @@ const { width, height } = Dimensions.get('window');
 function App(): JSX.Element {
   return (
     <SafeAreaView>
-      <StatusBar barStyle="dark-content" backgroundColor="#EEEEEE" />
+      <StatusBar barStyle="dark-content" backgroundColor="rgba(255, 255, 255, 1.0)" />
       <View style={styles.container}>
         <Text> Hello World </Text>
       </View>
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     alignItems: 'center',
     justifyContent:'center',
-    backgroundColor: '#EEEEEE',
+    backgroundColor: 'rgba(255, 255, 255, 1.0)',
   }
 });
 
