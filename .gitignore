@@ -67,3 +67,6 @@ yarn-error.log
 
 # React Native
 .bundle
+
+# Custom
+zNote
