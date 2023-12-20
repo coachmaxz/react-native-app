@@ -19,7 +19,7 @@ function App(): React.JSX.Element {
   return (
     <>
       <ToastProvider 
-        placement="top"
+        placement="bottom"
         /*
         renderToast={(toastOptions: any) => {
           console.log(toastOptions)

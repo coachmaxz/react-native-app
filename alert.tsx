@@ -1,5 +1,7 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, View, Text, TouchableOpacity, Dimensions } from 'react-native'
+
+import { SafeAreaView, StatusBar, StyleSheet, useColorScheme, View, Text, TouchableOpacity, Dimensions } from 'react-native'
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 import { useToast } from 'react-native-toast-notifications'
 
@@ -8,6 +10,7 @@ const { width, height } = Dimensions.get('window')
 function AlertScreen(): React.JSX.Element {
 
   const alert = useToast()
+  const isDarkMode = useColorScheme() === 'dark'
 
   const onShowAlert = (position: any = 'top') => {
     alert.show('Message Alert', { 
@@ -35,8 +38,12 @@ function AlertScreen(): React.JSX.Element {
     }, 2000) // 2 seconds
   }
 
+  const backgroundStyle = {
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+  }
+
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={{ ...styles.container, ...backgroundStyle }}>
       <Text>Popup Alert</Text>
       <View style={styles.wrapper}>
         <TouchableOpacity onPress={() => onShowAlert('top')} style={styles.btn}>
