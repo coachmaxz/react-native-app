@@ -1,11 +1,8 @@
 import React from 'react'
+import { SafeAreaView, StyleSheet, useColorScheme, View, Text, TouchableOpacity, Dimensions } from 'react-native'
 
-import { SafeAreaView, StatusBar, StyleSheet, useColorScheme, View, Text, TouchableOpacity, Dimensions } from 'react-native'
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 import { useToast } from 'react-native-toast-notifications'
-
-const { width, height } = Dimensions.get('window')
 
 function AlertScreen(): React.JSX.Element {
 
@@ -14,7 +11,7 @@ function AlertScreen(): React.JSX.Element {
 
   const onShowAlert = (position: any = 'top') => {
     alert.show('Message Alert', { 
-      type: 'normal', // normal | success | warning | danger | custom,
+      type: 'success', // normal | success | warning | danger | custom
       placement: position, // top | bottom | center
       duration: 4000, // 4 seconds
       animationType: 'slide-in', // slide-in | zoom-in
@@ -23,19 +20,28 @@ function AlertScreen(): React.JSX.Element {
 
   const onUpdateAlert = (position: any = 'center') => {
     let id = alert.show('Loading...', {
-      type: 'normal', // normal | success | warning | danger | custom
+      type: 'success', // normal | success | warning | danger
       placement: position, // top | bottom | center
       duration: 4000, // 4 seconds
       animationType: 'slide-in', // slide-in | zoom-in
     })
     setTimeout(() => {
       alert.update(id, 'Loading completed', {
-        type: 'normal', // normal | success | warning | danger | custom
+        type: 'normal', // normal | success | warning | danger
         placement: position, // top | bottom | center
         duration: 4000, // 4 seconds
         animationType: 'slide-in', // slide-in | zoom-in
       })
     }, 2000) // 2 seconds
+  }
+
+  const onClick = () => {
+    alert.show('Message Alert', { 
+      type: 'normal', // normal | success | warning | danger
+      placement: 'top', // top | bottom | center
+      duration: 4000, // 4 seconds
+      animationType: 'slide-in', // slide-in | zoom-in
+    })
   }
 
   const backgroundStyle = {
@@ -44,6 +50,12 @@ function AlertScreen(): React.JSX.Element {
 
   return (
     <SafeAreaView style={{ ...styles.container, ...backgroundStyle }}>
+      <Text>Popup Alert</Text>
+      <TouchableOpacity onPress={onClick} style={styles.btn}>
+        <Text style={styles.btnText}>
+          Show
+        </Text>
+      </TouchableOpacity>
       <Text>Popup Alert</Text>
       <View style={styles.wrapper}>
         <TouchableOpacity onPress={() => onShowAlert('top')} style={styles.btn}>
@@ -77,19 +89,14 @@ function AlertScreen(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
-    height: height,
+    height: Dimensions.get('window').height,
     alignItems: 'center',
     padding: 20,
-  },
-  wrapper: {
-    flexDirection: 'row',
-    alignContent: 'center',
-    alignItems: 'center',
-    marginBottom: 20,
   },
   btn: {
     margin: 2,
     marginTop: 10,
+    marginBottom: 20,
     paddingVertical: 10,
     paddingHorizontal: 20,
     width: 100,
@@ -99,7 +106,12 @@ const styles = StyleSheet.create({
   btnText: {
     color: 'white',
     textAlign: 'center',
-  }
+  },
+  wrapper: {
+    flexDirection: 'row',
+    alignContent: 'center',
+    alignItems: 'center',
+  },
 })
 
 export default AlertScreen
