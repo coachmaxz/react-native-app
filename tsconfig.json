@@ -14,7 +14,7 @@
   },
   "exclude": [
     "node_modules",
-    "babel.config.js",
+    "babel.config.ts",
     "metro.config.js",
     "jest.config.js"
   ]
