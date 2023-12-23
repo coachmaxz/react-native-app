@@ -12,7 +12,8 @@
   "dependencies": {
     "metro-react-native-babel-preset": "^0.77.0",
     "react": "18.2.0",
-    "react-native": "0.73.1"
+    "react-native": "0.73.1",
+    "react-native-asset": "^2.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.23.6",

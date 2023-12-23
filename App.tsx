@@ -36,8 +36,8 @@ const styles = StyleSheet.create({
     height: Dimensions.get('window').height,
   },
   helloWorld: {
-    marginTop: 90,
-    paddingVertical: 410,
+    marginTop: -90,
+    paddingVertical: 300,
     fontSize: 20,
     fontWeight: '400',
   },
