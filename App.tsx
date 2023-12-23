@@ -17,7 +17,7 @@ function App(): React.JSX.Element {
       <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
         <View style={styles.wrapper}>
           <Text style={[ styles.helloWorld, fontStyle ]}>
-            Hello World !!
+            สวัสดี !!
           </Text>
         </View>
       </ScrollView>
@@ -40,6 +40,7 @@ const styles = StyleSheet.create({
     paddingVertical: 300,
     fontSize: 20,
     fontWeight: '400',
+    fontFamily: 'NotoSansThai-Regular',
   },
 })
 
