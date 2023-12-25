@@ -11,6 +11,9 @@
     "strict": true,
     "target": "esnext",
     "types": ["react-native", "jest"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": [
     "node_modules",
