@@ -1,5 +1,5 @@
-import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import React from 'react'
+import { Text, View, StyleSheet } from 'react-native'
 
 function App(): JSX.Element {
   return (
@@ -8,7 +8,7 @@ function App(): JSX.Element {
         Hello World
       </Text>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -21,6 +21,6 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'steelblue',
   }
-});
+})
 
-export default App;
+export default App

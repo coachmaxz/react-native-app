@@ -26,6 +26,7 @@ if linkage != nil
 end
 
 target 'react_native_app' do
+
   config = use_native_modules!
 
   use_react_native!(
@@ -52,4 +53,5 @@ target 'react_native_app' do
       :mac_catalyst_enabled => false
     )
   end
+
 end
