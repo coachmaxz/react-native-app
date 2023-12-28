@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
   },
   helloWorld: {
     marginTop: -90,
-    paddingVertical: 300,
+    paddingVertical: 410,
     fontSize: 20,
     fontWeight: '400',
     fontFamily: 'NotoSansThai-Regular',
