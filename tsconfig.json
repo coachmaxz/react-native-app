@@ -1,5 +1,7 @@
 {
+  "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
+    "baseUrl": "." ,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -10,15 +12,15 @@
     "noEmit": true,
     "strict": true,
     "target": "esnext",
-    "types": ["react-native", "jest"],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "types": ["react-native", "jest", "node"],
   },
   "exclude": [
     "node_modules",
     "babel.config.ts",
     "metro.config.js",
     "jest.config.js"
+  ],
+  "typeRoots": [
+    "../node_modules/@types"
   ]
 }
